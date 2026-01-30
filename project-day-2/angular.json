@@ -1,15 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "f3078ecb-a1c5-4093-9c94-78dafa35e232",
-    "schematicCollections": [
-      "angular-eslint"
-    ]
+    "analytics": "2865f798-5d55-4fe5-b19b-dd7237404564"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-project": {
+    "project-day-2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -23,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-project",
+            "outputPath": "dist/project-day-2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -74,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-project:build:production"
+              "browserTarget": "project-day-2:build:production"
             },
             "development": {
-              "browserTarget": "angular-project:build:development"
+              "browserTarget": "project-day-2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-project:build"
+            "browserTarget": "project-day-2:build"
           }
         },
         "test": {
@@ -104,18 +101,9 @@
             ],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
-          }
         }
       }
     }
   },
-  "defaultProject": "angular-project"
+  "defaultProject": "project-day-2"
 }

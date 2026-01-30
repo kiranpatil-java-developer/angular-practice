@@ -43,7 +43,7 @@ export class Corets1Component {
   userId: ID = 101;
 
   // Array types
-  numbers: number[] = [1, 2, 3];
+  numbers: number[] = [1, 2, 3, 4, 5];
   names: Array<string> = ['Kiran', 'Rahul'];
 
   // Tuple
@@ -109,7 +109,7 @@ export class Corets1Component {
     console.log(this.role);
 
     // Interface object
-    console.log(this.user);
+    console.log("Interface Object: "+this.user);
 
     // Arrow functions
     console.log(this.add(5, 10));
