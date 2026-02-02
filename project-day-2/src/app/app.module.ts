@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ComponentLifecycleComponent } from './component-lifecycle/component-lifecycle.component';
+import { Day4taskComponent } from './day4task/day4task.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ComponentLifecycleComponent } from './component-lifecycle/component-lif
     FooterComponent,
     ParentComponent,
     ChildComponent,
-    ComponentLifecycleComponent
+    ComponentLifecycleComponent,
+    Day4taskComponent
   ],
   imports: [
     BrowserModule,

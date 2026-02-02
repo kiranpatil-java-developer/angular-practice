@@ -1,0 +1,28 @@
+<div>
+  <h1>Interpolation</h1>
+  <p>Interpolation is the simplest form of one-way data binding.</p>
+
+  <b>Name:</b> {{ name }}
+  <br />
+  <b>Age:</b> {{ age }}
+
+  <hr />
+
+  <h1>Two-Way Binding</h1>
+  <label>Update Name:</label>
+  <input type="text" [(ngModel)]="name" />
+
+  <hr />
+
+  <h1>Event Binding</h1>
+  <button (click)="isDisabledLogic()">Check Disable Logic</button>
+
+  <hr />
+
+  <h1>Property Binding</h1>
+  <p>
+    Property binding is used to bind a DOM property to a component variable.
+  </p>
+
+  <button [disabled]="isDisabled">Property Binding Button</button>
+</div>
