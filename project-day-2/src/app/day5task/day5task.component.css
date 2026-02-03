@@ -1,0 +1,77 @@
+.pointsCss {
+  color: #2c3e50;
+}
+
+.black {
+  color: black;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.loading {
+  color: darkgoldenrod;
+  font-weight: bold;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.admin {
+  background-color: #e3f2fd;
+  padding: 10px;
+  border-left: 4px solid #1976d2;
+}
+
+.card {
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+
+.paraCss {
+  color: gray;
+}
+
+.box {
+  padding: 15px;
+  border: 2px solid black;
+  width: fit-content;
+}
+
+/* -------- *ngClass --------  */
+.active {
+  background-color: green;
+  color: white;
+}
+
+.disabled {
+  background-color: gray;
+  color: white;
+  opacity: 0.6;
+}
+/* ----------------  */
+
+.box {
+  padding: 15px;
+  border: 2px solid black;
+  width: fit-content;
+}

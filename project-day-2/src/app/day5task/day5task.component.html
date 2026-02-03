@@ -1,0 +1,174 @@
+<h1>Structural Directives:</h1>
+
+<h2 class="pointsCss">1) *ngIf example (Color Change)</h2>
+
+<h3 *ngIf="textColor === 'white'" class="black">Welcome to Mumbai</h3>
+<h3 *ngIf="textColor === 'blue'" class="blue">Welcome to Mumbai</h3>
+<h3 *ngIf="textColor === 'red'" class="red">Welcome to Mumbai</h3>
+
+<div>
+  <button (click)="setBlue()">BLUE</button>
+  <button (click)="setRed()">RED</button>
+</div>
+
+<hr />
+
+<h2 class="pointsCss">2) *ngIf with else</h2>
+
+<div *ngIf="isLoggedIn; else loggedOut">
+  <p class="success">User is logged in</p>
+</div>
+
+<ng-template #loggedOut>
+  <p class="error">User is logged out</p>
+</ng-template>
+
+<button (click)="toggleLogin()">Toggle Login</button>
+
+<hr />
+
+<h2 class="pointsCss">3) *ngIf with multiple conditions</h2>
+
+<div *ngIf="isLoggedIn && isAdmin" class="admin">Admin Dashboard</div>
+<button (click)="toggleAdmin()">Toggle Admin</button>
+
+<hr />
+
+<h2 class="pointsCss">4) *ngIf with as</h2>
+
+<div *ngIf="user as u" class="card">
+  Name: {{ u.name }} <br />
+  Role: {{ u.role }}
+</div>
+
+<hr />
+
+<h2 class="pointsCss">5) Nested *ngIf</h2>
+
+<div *ngIf="isLoggedIn">
+  Logged In
+  <div *ngIf="isAdmin">(Admin Access)</div>
+</div>
+
+<hr />
+
+<h2 class="pointsCss">6) else-if using ng-container</h2>
+
+<ng-container *ngIf="status === 'loading'">
+  <p class="loading">Loading data...</p>
+</ng-container>
+
+<ng-container *ngIf="status === 'success'">
+  <p class="success">Data loaded successfully</p>
+</ng-container>
+
+<ng-container *ngIf="status === 'error'">
+  <p class="error">Error occurred</p>
+</ng-container>
+
+<button (click)="changeStatus('loading')">Loading</button>
+<button (click)="changeStatus('success')">Success</button>
+<button (click)="changeStatus('error')">Error</button>
+
+<hr />
+<hr />
+
+<h2 class="pointsCss">7) *ngFor example</h2>
+<p class="paraCss">
+  *ngFor is a structural directive used to iterate over a collection (array,
+  list, or iterable) and create a template instance for each item. It
+  dynamically adds or removes DOM elements based on the data source.
+</p>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>Subjects</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tech of technologies">
+      <td>{{ tech }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<hr />
+
+<h2 class="pointsCss">7) *ngSwitch example</h2>
+<p class="paraCss">
+  *ngFor is a structural directive used to iterate over a collection (array,
+  list, or iterable) and create a template instance for each item. It
+  dynamically adds or removes DOM elements based on the data source.
+</p>
+
+<hr />
+
+<input type="number" placeholder="Enter your age" [(ngModel)]="age" />
+
+<div [ngSwitch]="ageStatus">
+  <h4 *ngSwitchCase="'YOUNG'" style="color: blue">You are too young</h4>
+
+  <h4 *ngSwitchCase="'ELIGIBLE'" style="color: green">
+    Great! You are eligible for work
+  </h4>
+
+  <h4 *ngSwitchCase="'OLD'" style="color: red">You are too old</h4>
+
+  <h4 *ngSwitchCase="'NONE'" style="color: gray">Please enter your age</h4>
+</div>
+
+<hr />
+<hr />
+<h2 class="pointsCss">8) ngClass example</h2>
+
+<p class="paraCss">
+  ngClass is an attribute directive used to add or remove CSS classes
+  dynamically.
+</p>
+
+<div
+  class="box"
+  [ngClass]="{
+    active: isActive,
+    disabled: isDisabled
+  }"
+>
+  This box uses ngClass
+</div>
+
+<br />
+
+<button (click)="toggleActive()">Toggle Active</button>
+<button (click)="toggleDisabled()">Toggle Disabled</button>
+
+<hr />
+<hr />
+
+<h2 class="pointsCss">9) ngStyle example</h2>
+
+<p class="paraCss">
+  ngStyle is an attribute directive used to apply inline styles dynamically
+  using component properties.
+</p>
+
+<div
+  class="box"
+  [ngStyle]="{
+    'font-size': fontSize,
+    'background-color': bgColor,
+    color: 'black'
+  }"
+>
+  This box uses ngStyle
+</div>
+
+<br />
+
+<button (click)="increaseFont()">Increase Font</button>
+<button (click)="decreaseFont()">Decrease Font</button>
+<button (click)="changeBg('lightblue')">Light Blue</button>
+<button (click)="changeBg('lightgreen')">Light Green</button>

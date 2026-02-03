@@ -9,6 +9,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ComponentLifecycleComponent } from './component-lifecycle/component-lifecycle.component';
 import { Day4taskComponent } from './day4task/day4task.component';
+import { Day5taskComponent } from './day5task/day5task.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,12 @@ import { Day4taskComponent } from './day4task/day4task.component';
     ParentComponent,
     ChildComponent,
     ComponentLifecycleComponent,
-    Day4taskComponent
+    Day4taskComponent,
+    Day5taskComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule // ← REQUIRED
+    FormsModule
   ],
   bootstrap: [AppComponent]
 })

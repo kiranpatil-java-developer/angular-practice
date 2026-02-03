@@ -16,16 +16,8 @@ import {
   selector: 'app-component-lifecycle',
   templateUrl: './component-lifecycle.component.html'
 })
-export class ComponentLifecycleComponent
-  implements
-    OnInit,
-    OnChanges,
-    DoCheck,
-    AfterContentInit,
-    AfterContentChecked,
-    AfterViewInit,
-    AfterViewChecked,
-    OnDestroy {
+export class ComponentLifecycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit,
+AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   @Input() data!: string;
 
