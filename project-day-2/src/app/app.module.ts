@@ -10,6 +10,8 @@ import { ChildComponent } from './child/child.component';
 import { ComponentLifecycleComponent } from './component-lifecycle/component-lifecycle.component';
 import { Day4taskComponent } from './day4task/day4task.component';
 import { Day5taskComponent } from './day5task/day5task.component';
+import { Day6taskparentComponent } from './day6taskparent/day6taskparent.component';
+import { Day6taskchildComponent } from './day6taskchild/day6taskchild.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { Day5taskComponent } from './day5task/day5task.component';
     ChildComponent,
     ComponentLifecycleComponent,
     Day4taskComponent,
-    Day5taskComponent
+    Day5taskComponent,
+    Day6taskparentComponent,
+    Day6taskchildComponent
   ],
   imports: [
     BrowserModule,

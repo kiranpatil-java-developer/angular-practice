@@ -1,0 +1,32 @@
+<div style="border: 2px solid red; padding: 10px">
+  <p style="color: gray">Parent Component HTML</p>
+
+  <app-day6taskchild [msg]="msg"></app-day6taskchild>
+
+  <hr />
+
+  <p>
+    Child Message:
+    <span>{{ childMsg }}</span>
+  </p>
+
+  <app-day6taskchild (childMessageEmitter)="receiveChildMessage($event)">
+  </app-day6taskchild>
+
+  <hr />
+
+  <h1><span style="color: darkgreen">Object Passing:</span> Parent to Child</h1>
+
+  <app-day6taskchild [product]="product"></app-day6taskchild>
+
+  <hr />
+
+  <h1><span style="color: darkblue">Array Passing:</span> Child to Parent</h1>
+
+  <app-day6taskchild (productsEmitter)="receiveProductsFromChild($event)">
+  </app-day6taskchild>
+
+  <ul>
+    <li *ngFor="let p of receivedProducts">{{ p.name }} - ₹{{ p.price }}</li>
+  </ul>
+</div>

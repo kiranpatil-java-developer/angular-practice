@@ -1,0 +1,47 @@
+<div style="border: 2px solid rgb(229, 239, 192); padding: 10px">
+  <p style="color: gray">Child Component HTML</p>
+
+  <!-- Parent → Child (STRING) -->
+  <div *ngIf="msg">
+    <h1 style="color: blue">Parent Message</h1>
+    <h3>{{ msg }}</h3>
+    <hr />
+  </div>
+
+  <!-- Child → Parent (STRING) -->
+  <button
+    *ngIf="childMessageEmitter.observers.length > 0"
+    style="background-color: rgb(157, 234, 208)"
+    (click)="sendMessageToParent()"
+  >
+    Send Message to Parent
+  </button>
+
+  <hr />
+
+  <!-- Parent → Child (OBJECT) -->
+  <div *ngIf="product">
+    <h3>Child Component – Product</h3>
+    <p>ID: {{ product.id }}</p>
+    <p>Name: {{ product.name }}</p>
+    <p>Brand: {{ product.brand }}</p>
+    <p>Price: ₹{{ product.price }}</p>
+    <hr />
+  </div>
+
+  <!-- Child → Parent (ARRAY) -->
+  <div *ngIf="productsEmitter.observers.length > 0">
+    <h3>Products in Child</h3>
+
+    <ul>
+      <li *ngFor="let p of products">{{ p.name }} - ₹{{ p.price }}</li>
+    </ul>
+
+    <button
+      style="background-color: lightcoral"
+      (click)="sendProductsToParent()"
+    >
+      Send Products Array to Parent
+    </button>
+  </div>
+</div>

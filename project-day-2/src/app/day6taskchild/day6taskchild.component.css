@@ -1,0 +1,20 @@
+hr {
+  border: none;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6ee7f9, #a78bfa, #f472b6, #34d399);
+  background-size: 300% 100%;
+  animation: fresh-flow 3s ease-in-out infinite;
+}
+
+@keyframes fresh-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
