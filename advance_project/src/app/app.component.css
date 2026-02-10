@@ -1,0 +1,9 @@
+.common {
+  border: 1px solid #000000;
+  padding: 20px;
+}
+
+app-login {
+  display: block;
+  margin-bottom: 20px;
+}
