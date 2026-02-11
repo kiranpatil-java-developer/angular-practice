@@ -1,0 +1,42 @@
+.login-container {
+  border: 1px solid #d10000;
+  padding: 16px;
+  width: 350px;
+  margin: auto;
+  background-color: rgb(243, 241, 241);
+}
+
+.login-title {
+  text-align: center;
+  color: darkblue;
+}
+
+.login-table {
+  width: 100%;
+}
+
+.login-input {
+  width: 100%;
+  background-color: #ffffff;
+  height: 20px;
+  border-radius: 900px;
+}
+
+.login-actions {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.login-button {
+  width: 30%;
+}
+
+.login-button:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

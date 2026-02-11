@@ -1,28 +1,35 @@
-<div style="border: 1px solid #d10000; padding: 16px">
-  <h2 style="text-align: center">Login Component</h2>
+<div class="login-container">
+  <h2 class="login-title">Login</h2>
 
-  <table>
+  <table class="login-table">
     <tr>
       <td>Phone Number:</td>
       <td>
-        <input type="text" placeholder="Enter phone number" #phoneNumber />
+        <input
+          type="text"
+          placeholder="Enter phone number"
+          [(ngModel)]="phoneNumber"
+          class="login-input"
+        />
       </td>
     </tr>
 
     <tr>
       <td>Password:</td>
       <td>
-        <input type="password" placeholder="Enter password" #password />
+        <input
+          type="password"
+          placeholder="Enter password"
+          [(ngModel)]="password"
+          class="login-input"
+        />
       </td>
     </tr>
 
     <tr>
-      <td colspan="2" style="text-align: center">
-        <button (click)="loginChecks(phoneNumber.value, password.value)">
-          Login
-        </button>
-
-        <p *ngIf="errorMessage" style="color: red">
+      <td colspan="2" class="login-actions">
+        <button class="login-button" (click)="loginChecks()">Login</button>
+        <p *ngIf="errorMessage" class="error-message">
           {{ errorMessage }}
         </p>
       </td>

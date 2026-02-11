@@ -1,0 +1,50 @@
+<div class="todo">
+  <div class="todo-menu">
+    <h1>Todo Dashboard</h1>
+
+    <div class="route-buttons">
+      <button routerLink="/">Home</button>
+      <button routerLink="/login">Login</button>
+      <button routerLink="/register">Register</button>
+      <button routerLink="/about">About</button>
+    </div>
+  </div>
+
+  <div class="add-todo">
+    <input type="text" placeholder="Enter new task" />
+    <input type="date" />
+    <input type="time" />
+    <button>Add</button>
+  </div>
+
+  <div class="todo-list">
+    <div class="todo-header">
+      <span>Task</span>
+      <span>Date</span>
+      <span>Time</span>
+      <span>Status</span>
+    </div>
+
+    <ul>
+      <li *ngFor="let todo of todos">
+        <div class="todo-item">
+          <span class="todo-text">
+            {{ todo.description }}
+          </span>
+
+          <span class="todo-date">
+            {{ todo.date }}
+          </span>
+
+          <span class="todo-time">
+            {{ todo.time }}
+          </span>
+
+          <div class="status-section">
+            <input type="checkbox" [(ngModel)]="todo.completed" />
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
